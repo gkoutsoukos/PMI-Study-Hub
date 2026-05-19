@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>PMI Study Hub – Test Index</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=DM+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <style>
   :root {
     --navy: #0f1e3c;
@@ -676,491 +677,468 @@
   }
 </style>
 </head>
-
 <body>
 <header class="header">
-  <div class="header-inner">
-    <h1 class="header-title">
+<div class="header-inner">
+<h1 class="header-title">
       PMI Study Hub
       <span>PMP mock exams · CAPM mock exams · Practice tests · Knowledge area quizzes</span>
-    </h1>
-
-    <div class="summary">
-      <div class="summary-chip"><strong>50</strong><span>Total Tests</span></div>
-      <div class="summary-chip"><strong>20</strong><span>PMP/CAPM</span></div>
-      <div class="summary-chip"><strong>30</strong><span>Practice</span></div>
-      <div class="summary-chip"><strong>60</strong><span>Min Mock</span></div>
-    </div>
-  </div>
+</h1>
+<div class="summary"><div class="summary-chip"><strong>50</strong><span>Total Tests</span></div><div class="summary-chip"><strong>10</strong><span>PMP Mock Exams</span></div><div class="summary-chip"><strong>10</strong><span>CAPM Mock Exams</span></div><div class="summary-chip"><strong>30</strong><span>Practice / Focus</span></div></div>
+</div>
 </header>
-
 <main class="main">
-  <div class="toolbar">
-    <label>Show:</label>
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="pmp">PMP</button>
-    <button class="filter-btn" data-filter="capm">CAPM</button>
-    <button class="filter-btn" data-filter="practice">Practice</button>
-    <button class="filter-btn" data-filter="quiz">Knowledge</button>
-    <button class="filter-btn" data-filter="focus">Focus</button>
-    <button class="theme-toggle" id="themeToggle" type="button">🌙 Dark</button>
-    <button class="view-toggle" id="viewToggle" type="button">☰ Compact</button>
-    <input class="search" id="searchBox" type="search" placeholder="Search test name..." aria-label="Search test name">
-  </div>
-
-  <section class="continue-panel" id="continuePanel" aria-live="polite">
-    <div class="continue-copy">
-      <strong>Continue Studying</strong>
-      <span id="continueText">No test opened yet.</span>
-    </div>
-    <a class="continue-btn" id="continueLink" href="#">Open Last Test</a>
-  </section>
-
-  <!-- PMP MOCK EXAMS -->
-  <details class="section" open data-section="pmp">
-    <summary class="section-header">
-      <div class="section-heading">
-        <span class="section-marker">P</span>
-        <div>
-          <h2 class="section-title">PMP Mock Exams</h2>
-          <span class="section-subtitle">Full PMP mock tests</span>
-        </div>
-      </div>
-      <div class="section-meta">10 tests</div>
-      <div class="chevron">›</div>
-    </summary>
-
-    <section class="grid">
-      <article class="test-card" data-type="pmp" data-title="pmp mock exam 01 full pmp mock test">
-        <div class="card-top"><span class="test-num">PMP 01</span><span class="badge pmp">PMP Mock</span></div>
-        <h3>PMP Mock Exam 01</h3>
-        <p class="description">General PMP mock test.</p>
-        <div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="pmp/01_PMP_Mock_Exam.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="pmp" data-title="pmp mock exam 02 full pmp mock test">
-        <div class="card-top"><span class="test-num">PMP 02</span><span class="badge pmp">PMP Mock</span></div>
-        <h3>PMP Mock Exam 02</h3>
-        <p class="description">General PMP mock test.</p>
-        <div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="pmp/02_PMP_Mock_Exam.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="pmp" data-title="pmp mock exam 03 full pmp mock test">
-        <div class="card-top"><span class="test-num">PMP 03</span><span class="badge pmp">PMP Mock</span></div>
-        <h3>PMP Mock Exam 03</h3>
-        <p class="description">General PMP mock test.</p>
-        <div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="pmp/03_PMP_Mock_Exam.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="pmp" data-title="pmp mock exam 04 full pmp mock test">
-        <div class="card-top"><span class="test-num">PMP 04</span><span class="badge pmp">PMP Mock</span></div>
-        <h3>PMP Mock Exam 04</h3>
-        <p class="description">General PMP mock test.</p>
-        <div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="pmp/04_PMP_Mock_Exam.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="pmp" data-title="pmp mock exam 05 full pmp mock test">
-        <div class="card-top"><span class="test-num">PMP 05</span><span class="badge pmp">PMP Mock</span></div>
-        <h3>PMP Mock Exam 05</h3>
-        <p class="description">General PMP mock test.</p>
-        <div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="pmp/05_PMP_Mock_Exam.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="pmp" data-title="pmp mock exam 06 full pmp mock test">
-        <div class="card-top"><span class="test-num">PMP 06</span><span class="badge pmp">PMP Mock</span></div>
-        <h3>PMP Mock Exam 06</h3>
-        <p class="description">General PMP mock test.</p>
-        <div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="pmp/06_PMP_Mock_Exam.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="pmp" data-title="pmp mock exam 07 full pmp mock test">
-        <div class="card-top"><span class="test-num">PMP 07</span><span class="badge pmp">PMP Mock</span></div>
-        <h3>PMP Mock Exam 07</h3>
-        <p class="description">General PMP mock test.</p>
-        <div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="pmp/07_PMP_Mock_Exam.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="pmp" data-title="pmp mock exam 08 full pmp mock test">
-        <div class="card-top"><span class="test-num">PMP 08</span><span class="badge pmp">PMP Mock</span></div>
-        <h3>PMP Mock Exam 08</h3>
-        <p class="description">General PMP mock test.</p>
-        <div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="pmp/08_PMP_Mock_Exam.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="pmp" data-title="pmp mock exam 09 full pmp mock test">
-        <div class="card-top"><span class="test-num">PMP 09</span><span class="badge pmp">PMP Mock</span></div>
-        <h3>PMP Mock Exam 09</h3>
-        <p class="description">General PMP mock test.</p>
-        <div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="pmp/09_PMP_Mock_Exam.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="pmp" data-title="pmp mock exam 10 full pmp mock test">
-        <div class="card-top"><span class="test-num">PMP 10</span><span class="badge pmp">PMP Mock</span></div>
-        <h3>PMP Mock Exam 10</h3>
-        <p class="description">General PMP mock test.</p>
-        <div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="pmp/10_PMP_Mock_Exam.html">Open Test</a>
-      </article>
-    </section>
-  </details>
-
-  <!-- CAPM MOCK EXAMS -->
-  <details class="section" open data-section="capm">
-    <summary class="section-header">
-      <div class="section-heading">
-        <span class="section-marker">C</span>
-        <div>
-          <h2 class="section-title">CAPM Mock Exams</h2>
-          <span class="section-subtitle">CAPM mock tests</span>
-        </div>
-      </div>
-      <div class="section-meta">10 tests</div>
-      <div class="chevron">›</div>
-    </summary>
-
-    <section class="grid">
-      <article class="test-card" data-type="capm" data-title="capm mock exam 01">
-        <div class="card-top"><span class="test-num">CAPM 01</span><span class="badge capm">CAPM Mock</span></div>
-        <h3>CAPM Mock Exam 01</h3>
-        <p class="description">General CAPM mock test.</p>
-        <div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="capm/01_CAPM_Mock_Exam.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="capm" data-title="capm mock exam 02">
-        <div class="card-top"><span class="test-num">CAPM 02</span><span class="badge capm">CAPM Mock</span></div>
-        <h3>CAPM Mock Exam 02</h3>
-        <p class="description">General CAPM mock test.</p>
-        <div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="capm/02_CAPM_Mock_Exam.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="capm" data-title="capm mock exam 03">
-        <div class="card-top"><span class="test-num">CAPM 03</span><span class="badge capm">CAPM Mock</span></div>
-        <h3>CAPM Mock Exam 03</h3>
-        <p class="description">General CAPM mock test.</p>
-        <div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="capm/03_CAPM_Mock_Exam.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="capm" data-title="capm mock exam 04">
-        <div class="card-top"><span class="test-num">CAPM 04</span><span class="badge capm">CAPM Mock</span></div>
-        <h3>CAPM Mock Exam 04</h3>
-        <p class="description">General CAPM mock test.</p>
-        <div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="capm/04_CAPM_Mock_Exam.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="capm" data-title="capm mock exam 05">
-        <div class="card-top"><span class="test-num">CAPM 05</span><span class="badge capm">CAPM Mock</span></div>
-        <h3>CAPM Mock Exam 05</h3>
-        <p class="description">General CAPM mock test.</p>
-        <div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="capm/05_CAPM_Mock_Exam.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="capm" data-title="capm mock exam 06">
-        <div class="card-top"><span class="test-num">CAPM 06</span><span class="badge capm">CAPM Mock</span></div>
-        <h3>CAPM Mock Exam 06</h3>
-        <p class="description">General CAPM mock test.</p>
-        <div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="capm/06_CAPM_Mock_Exam.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="capm" data-title="capm mock exam 07">
-        <div class="card-top"><span class="test-num">CAPM 07</span><span class="badge capm">CAPM Mock</span></div>
-        <h3>CAPM Mock Exam 07</h3>
-        <p class="description">General CAPM mock test.</p>
-        <div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="capm/07_CAPM_Mock_Exam.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="capm" data-title="capm mock exam 08">
-        <div class="card-top"><span class="test-num">CAPM 08</span><span class="badge capm">CAPM Mock</span></div>
-        <h3>CAPM Mock Exam 08</h3>
-        <p class="description">General CAPM mock test.</p>
-        <div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="capm/08_CAPM_Mock_Exam.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="capm" data-title="capm mock exam 09">
-        <div class="card-top"><span class="test-num">CAPM 09</span><span class="badge capm">CAPM Mock</span></div>
-        <h3>CAPM Mock Exam 09</h3>
-        <p class="description">General CAPM mock test.</p>
-        <div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="capm/09_CAPM_Mock_Exam.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="capm" data-title="capm mock exam 10">
-        <div class="card-top"><span class="test-num">CAPM 10</span><span class="badge capm">CAPM Mock</span></div>
-        <h3>CAPM Mock Exam 10</h3>
-        <p class="description">General CAPM mock test.</p>
-        <div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="capm/10_CAPM_Mock_Exam.html">Open Test</a>
-      </article>
-    </section>
-  </details>
-
-  <!-- SCORDO LITE MOCK EXAMS -->
-  <details class="section" open data-section="practice">
-    <summary class="section-header">
-      <div class="section-heading">
-        <span class="section-marker">S</span>
-        <div>
-          <h2 class="section-title">Practice Lite Mock Exams</h2>
-          <span class="section-subtitle">Condensed PMP practice tests, generally designed for 60-minute attempts.</span>
-        </div>
-      </div>
-      <div class="section-meta">18 tests</div>
-      <div class="chevron">›</div>
-    </summary>
-
-    <section class="grid">
-      <article class="test-card" data-type="practice" data-title="practice pmp lite mock exam 1">
-        <div class="card-top"><span class="test-num">01</span><span class="badge practice">Practice Lite</span></div>
-        <h3>PMP Lite Mock Exam 1</h3>
-        <p class="description">Practice lite mock exam.</p>
-        <div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>35</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="practice/01_PMP_Lite_Mock_Exam_1.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="practice" data-title="practice pmp lite mock exam 2">
-        <div class="card-top"><span class="test-num">03</span><span class="badge practice">Practice Lite</span></div>
-        <h3>PMP Lite Mock Exam 2</h3>
-        <p class="description">Practice lite mock exam.</p>
-        <div class="meta-grid"><div><strong>51</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>36</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="practice/03_PMP_Lite_Mock_Exam_2.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="practice" data-title="practice pmp lite mock exam 3">
-        <div class="card-top"><span class="test-num">05</span><span class="badge practice">Practice Lite</span></div>
-        <h3>PMP Lite Mock Exam 3</h3>
-        <p class="description">Practice lite mock exam.</p>
-        <div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>35</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="practice/05_PMP_Lite_Mock_Exam_3.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="practice" data-title="practice pmp lite mock exam 4">
-        <div class="card-top"><span class="test-num">07</span><span class="badge practice">Practice Lite</span></div>
-        <h3>PMP Lite Mock Exam 4</h3>
-        <p class="description">Practice lite mock exam.</p>
-        <div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>35</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="practice/07_PMP_Lite_Mock_Exam_4.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="practice" data-title="practice pmp lite mock exam 5">
-        <div class="card-top"><span class="test-num">09</span><span class="badge practice">Practice Lite</span></div>
-        <h3>PMP Lite Mock Exam 5</h3>
-        <p class="description">Practice lite mock exam.</p>
-        <div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>35</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="practice/09_PMP_Lite_Mock_Exam_5.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="practice" data-title="practice pmp lite mock exam 6">
-        <div class="card-top"><span class="test-num">10</span><span class="badge practice">Practice Lite</span></div>
-        <h3>PMP Lite Mock Exam 6</h3>
-        <p class="description">Practice lite mock exam.</p>
-        <div class="meta-grid"><div><strong>51</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>36</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="practice/10_PMP_Lite_Mock_Exam_6.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="practice" data-title="practice pmp lite mock exam 7">
-        <div class="card-top"><span class="test-num">12</span><span class="badge practice">Practice Lite</span></div>
-        <h3>PMP Lite Mock Exam 7</h3>
-        <p class="description">Practice lite mock exam.</p>
-        <div class="meta-grid"><div><strong>51</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>36</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="practice/12_PMP_Lite_Mock_Exam_7.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="practice" data-title="practice pmp lite mock exam 8">
-        <div class="card-top"><span class="test-num">13</span><span class="badge practice">Practice Lite</span></div>
-        <h3>PMP Lite Mock Exam 8</h3>
-        <p class="description">Practice lite mock exam.</p>
-        <div class="meta-grid"><div><strong>51</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>36</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="practice/13_PMP_Lite_Mock_Exam_8.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="practice" data-title="practice pmp lite mock exam 9">
-        <div class="card-top"><span class="test-num">15</span><span class="badge practice">Practice Lite</span></div>
-        <h3>PMP Lite Mock Exam 9</h3>
-        <p class="description">Practice lite mock exam.</p>
-        <div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>35</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="practice/15_PMP_Lite_Mock_Exam_9.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="practice" data-title="practice pmp lite mock exam 10">
-        <div class="card-top"><span class="test-num">16</span><span class="badge practice">Practice Lite</span></div>
-        <h3>PMP Lite Mock Exam 10</h3>
-        <p class="description">Practice lite mock exam.</p>
-        <div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>35</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="practice/16_PMP_Lite_Mock_Exam_10.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="practice" data-title="practice pmp lite mock exam 11">
-        <div class="card-top"><span class="test-num">18</span><span class="badge practice">Practice Lite</span></div>
-        <h3>PMP Lite Mock Exam 11</h3>
-        <p class="description">Practice lite mock exam.</p>
-        <div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>35</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="practice/18_PMP_Lite_Mock_Exam_11.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="practice" data-title="practice pmp lite mock exam 12">
-        <div class="card-top"><span class="test-num">19</span><span class="badge practice">Practice Lite</span></div>
-        <h3>PMP Lite Mock Exam 12</h3>
-        <p class="description">Practice lite mock exam.</p>
-        <div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>35</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="practice/19_PMP_Lite_Mock_Exam_12.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="practice" data-title="practice pmp lite mock exam 13">
-        <div class="card-top"><span class="test-num">21</span><span class="badge practice">Practice Lite</span></div>
-        <h3>PMP Lite Mock Exam 13</h3>
-        <p class="description">Practice lite mock exam.</p>
-        <div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>35</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="practice/21_PMP_Lite_Mock_Exam_13.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="practice" data-title="practice pmp lite mock exam 14">
-        <div class="card-top"><span class="test-num">22</span><span class="badge practice">Practice Lite</span></div>
-        <h3>PMP Lite Mock Exam 14</h3>
-        <p class="description">Practice lite mock exam.</p>
-        <div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>35</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="practice/22_PMP_Lite_Mock_Exam_14.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="practice" data-title="practice pmp lite mock exam 15">
-        <div class="card-top"><span class="test-num">24</span><span class="badge practice">Practice Lite</span></div>
-        <h3>PMP Lite Mock Exam 15</h3>
-        <p class="description">Practice lite mock exam.</p>
-        <div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>35</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="practice/24_PMP_Lite_Mock_Exam_15.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="practice" data-title="practice pmp lite mock exam 16">
-        <div class="card-top"><span class="test-num">25</span><span class="badge practice">Practice Lite</span></div>
-        <h3>PMP Lite Mock Exam 16</h3>
-        <p class="description">Practice lite mock exam.</p>
-        <div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>35</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="practice/25_PMP_Lite_Mock_Exam_16.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="practice" data-title="practice pmp lite mock exam 17">
-        <div class="card-top"><span class="test-num">27</span><span class="badge practice">Practice Lite</span></div>
-        <h3>PMP Lite Mock Exam 17</h3>
-        <p class="description">Practice lite mock exam.</p>
-        <div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>35</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="practice/27_PMP_Lite_Mock_Exam_17.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="practice" data-title="practice pmp lite mock exam 18">
-        <div class="card-top"><span class="test-num">29</span><span class="badge practice">Practice Lite</span></div>
-        <h3>PMP Lite Mock Exam 18</h3>
-        <p class="description">Practice lite mock exam.</p>
-        <div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>35</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="practice/29_PMP_Lite_Mock_Exam_18.html">Open Test</a>
-      </article>
-    </section>
-  </details>
-
-  <!-- SCORDO KNOWLEDGE AREA TESTS -->
-  <details class="section" open data-section="quiz">
-    <summary class="section-header">
-      <div class="section-heading">
-        <span class="section-marker">K</span>
-        <div>
-          <h2 class="section-title">Practice Knowledge Area Tests</h2>
-          <span class="section-subtitle">Focused quizzes by PMBOK knowledge area.</span>
-        </div>
-      </div>
-      <div class="section-meta">11 tests</div>
-      <div class="chevron">›</div>
-    </summary>
-
-    <section class="grid">
-      <article class="test-card" data-type="quiz" data-title="practice knowledge area test project management framework">
-        <div class="card-top"><span class="test-num">02</span><span class="badge quiz">Knowledge Quiz</span></div>
-        <h3>Project Management Framework</h3>
-        <p class="description">Focused knowledge area quiz.</p>
-        <div class="meta-grid"><div><strong>10</strong><span>Questions</span></div><div><strong>15</strong><span>Minutes</span></div><div><strong>7</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="practice/02_Knowledge_Area_Test_Project_Management_Framework.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="quiz" data-title="practice knowledge area test project integration management">
-        <div class="card-top"><span class="test-num">04</span><span class="badge quiz">Knowledge Quiz</span></div>
-        <h3>Project Integration Management</h3>
-        <p class="description">Focused knowledge area quiz.</p>
-        <div class="meta-grid"><div><strong>10</strong><span>Questions</span></div><div><strong>15</strong><span>Minutes</span></div><div><strong>7</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="practice/04_Knowledge_Area_Test_Project_Integration_Management.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="quiz" data-title="practice knowledge area test project scope management">
-        <div class="card-top"><span class="test-num">06</span><span class="badge quiz">Knowledge Quiz</span></div>
-        <h3>Project Scope Management</h3>
-        <p class="description">Focused knowledge area quiz.</p>
-        <div class="meta-grid"><div><strong>10</strong><span>Questions</span></div><div><strong>15</strong><span>Minutes</span></div><div><strong>7</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="practice/06_Knowledge_Area_Test_Project_Scope_Management.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="quiz" data-title="practice knowledge area test project time management">
-        <div class="card-top"><span class="test-num">08</span><span class="badge quiz">Knowledge Quiz</span></div>
-        <h3>Project Time Management</h3>
-        <p class="description">Focused knowledge area quiz.</p>
-        <div class="meta-grid"><div><strong>10</strong><span>Questions</span></div><div><strong>15</strong><span>Minutes</span></div><div><strong>7</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="practice/08_Knowledge_Area_Test_Project_Time_Management.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="quiz" data-title="practice knowledge area test project cost management">
-        <div class="card-top"><span class="test-num">11</span><span class="badge quiz">Knowledge Quiz</span></div>
-        <h3>Project Cost Management</h3>
-        <p class="description">Focused knowledge area quiz.</p>
-        <div class="meta-grid"><div><strong>10</strong><span>Questions</span></div><div><strong>15</strong><span>Minutes</span></div><div><strong>7</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="practice/11_Knowledge_Area_Test_Project_Cost_Management.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="quiz" data-title="practice knowledge area test project quality management">
-        <div class="card-top"><span class="test-num">14</span><span class="badge quiz">Knowledge Quiz</span></div>
-        <h3>Project Quality Management</h3>
-        <p class="description">Focused knowledge area quiz.</p>
-        <div class="meta-grid"><div><strong>10</strong><span>Questions</span></div><div><strong>15</strong><span>Minutes</span></div><div><strong>7</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="practice/14_Knowledge_Area_Test_Project_Quality_Management.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="quiz" data-title="practice knowledge area test project human resource management">
-        <div class="card-top"><span class="test-num">17</span><span class="badge quiz">Knowledge Quiz</span></div>
-        <h3>Project Human Resource Management</h3>
-        <p class="description">Focused knowledge area quiz.</p>
-        <div class="meta-grid"><div><strong>10</strong><span>Questions</span></div><div><strong>15</strong><span>Minutes</span></div><div><strong>7</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="practice/17_Knowledge_Area_Test_Project_Human_Resource_Management.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="quiz" data-title="practice knowledge area test project communications management">
-        <div class="card-top"><span class="test-num">20</span><span class="badge quiz">Knowledge Quiz</span></div>
-        <h3>Project Communications Management</h3>
-        <p class="description">Focused knowledge area quiz.</p>
-        <div class="meta-grid"><div><strong>10</strong><span>Questions</span></div><div><strong>15</strong><span>Minutes</span></div><div><strong>7</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="practice/20_Knowledge_Area_Test_Project_Communications_Management.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="quiz" data-title="practice knowledge area test project risk management">
-        <div class="card-top"><span class="test-num">23</span><span class="badge quiz">Knowledge Quiz</span></div>
-        <h3>Project Risk Management</h3>
-        <p class="description">Focused knowledge area quiz.</p>
-        <div class="meta-grid"><div><strong>10</strong><span>Questions</span></div><div><strong>15</strong><span>Minutes</span></div><div><strong>7</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="practice/23_Knowledge_Area_Test_Project_Risk_Management.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="quiz" data-title="practice knowledge area test project procurement management">
-        <div class="card-top"><span class="test-num">26</span><span class="badge quiz">Knowledge Quiz</span></div>
-        <h3>Project Procurement Management</h3>
-        <p class="description">Focused knowledge area quiz.</p>
-        <div class="meta-grid"><div><strong>10</strong><span>Questions</span></div><div><strong>15</strong><span>Minutes</span></div><div><strong>7</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="practice/26_Knowledge_Area_Test_Project_Procurement_Management.html">Open Test</a>
-      </article>
-      <article class="test-card" data-type="quiz" data-title="practice knowledge area test project stakeholder management">
-        <div class="card-top"><span class="test-num">28</span><span class="badge quiz">Knowledge Quiz</span></div>
-        <h3>Project Stakeholder Management</h3>
-        <p class="description">Focused knowledge area quiz.</p>
-        <div class="meta-grid"><div><strong>10</strong><span>Questions</span></div><div><strong>15</strong><span>Minutes</span></div><div><strong>7</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="practice/28_Knowledge_Area_Test_Project_Stakeholder_Management.html">Open Test</a>
-      </article>
-    </section>
-  </details>
-
-  <!-- FOCUS AREA -->
-  <details class="section" open data-section="focus">
-    <summary class="section-header">
-      <div class="section-heading">
-        <span class="section-marker">F</span>
-        <div>
-          <h2 class="section-title">Focus Area Tests</h2>
-          <span class="section-subtitle">Focused specialist tests.</span>
-        </div>
-      </div>
-      <div class="section-meta">1 test</div>
-      <div class="chevron">›</div>
-    </summary>
-
-    <section class="grid">
-      <article class="test-card" data-type="focus" data-title="practice focus area test professional and social responsibility">
-        <div class="card-top"><span class="test-num">30</span><span class="badge focus">Focus Area</span></div>
-        <h3>Professional and Social Responsibility</h3>
-        <p class="description">Focus area test.</p>
-        <div class="meta-grid"><div><strong>30</strong><span>Questions</span></div><div><strong>30</strong><span>Minutes</span></div><div><strong>24</strong><span>Pass Mark</span></div></div>
-        <a class="open-btn" href="practice/30_Focus_Area_Test_Professional_and_Social_Responsibility.html">Open Test</a>
-      </article>
-    </section>
-  </details>
-
-  <p class="footer">
-    All test pages should use the same interface and retain the extracted question wording. For GitHub Pages caching, use a temporary URL suffix such as <strong>?v=2</strong> after updates.
-  </p>
+<div class="toolbar">
+<label>Show:</label>
+<button class="filter-btn active" data-filter="all">All</button>
+<button class="filter-btn" data-filter="pmp">PMP</button>
+<button class="filter-btn" data-filter="capm">CAPM</button>
+<button class="filter-btn" data-filter="practice">Practice</button>
+<button class="filter-btn" data-filter="quiz">Knowledge</button>
+<button class="filter-btn" data-filter="focus">Focus</button>
+<button class="theme-toggle" id="themeToggle" type="button">🌙 Dark</button>
+<button class="view-toggle" id="viewToggle" type="button">☰ Compact</button>
+<input aria-label="Search test name" class="search" id="searchBox" placeholder="Search test name..." type="search"/>
+</div>
+<section aria-live="polite" class="continue-panel" id="continuePanel">
+<div class="continue-copy">
+<strong>Continue Studying</strong>
+<span id="continueText">No test opened yet.</span>
+</div>
+<a class="continue-btn" href="#" id="continueLink">Open Last Test</a>
+</section>
+<!-- PMP MOCK EXAMS -->
+<details class="section" data-section="pmp" open="">
+<summary class="section-header">
+<div class="section-heading">
+<span class="section-marker">P</span>
+<div>
+<h2 class="section-title">PMP Mock Exams</h2>
+<span class="section-subtitle">Full PMP mock tests · 180 questions · 230 minutes</span>
+</div>
+</div>
+<div class="section-meta">10 tests</div>
+<div class="chevron">›</div>
+</summary>
+<section class="grid">
+<article class="test-card" data-title="pmp mock exam 01 full pmp mock test" data-type="pmp">
+<div class="card-top"><span class="test-num">PMP 01</span><span class="badge pmp">PMP Mock</span></div>
+<h3>PMP Mock Exam 01</h3>
+<p class="description">Full PMP-style mock exam with exam-length timing.</p>
+<div class="meta-grid"><div><strong>180</strong><span>Questions</span></div><div><strong>230</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="pmp/01_PMP_Mock_Exam.html">Open Test</a>
+</article>
+<article class="test-card" data-title="pmp mock exam 02 full pmp mock test" data-type="pmp">
+<div class="card-top"><span class="test-num">PMP 02</span><span class="badge pmp">PMP Mock</span></div>
+<h3>PMP Mock Exam 02</h3>
+<p class="description">Full PMP-style mock exam with exam-length timing.</p>
+<div class="meta-grid"><div><strong>180</strong><span>Questions</span></div><div><strong>230</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="pmp/02_PMP_Mock_Exam.html">Open Test</a>
+</article>
+<article class="test-card" data-title="pmp mock exam 03 full pmp mock test" data-type="pmp">
+<div class="card-top"><span class="test-num">PMP 03</span><span class="badge pmp">PMP Mock</span></div>
+<h3>PMP Mock Exam 03</h3>
+<p class="description">Full PMP-style mock exam with exam-length timing.</p>
+<div class="meta-grid"><div><strong>180</strong><span>Questions</span></div><div><strong>230</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="pmp/03_PMP_Mock_Exam.html">Open Test</a>
+</article>
+<article class="test-card" data-title="pmp mock exam 04 full pmp mock test" data-type="pmp">
+<div class="card-top"><span class="test-num">PMP 04</span><span class="badge pmp">PMP Mock</span></div>
+<h3>PMP Mock Exam 04</h3>
+<p class="description">Full PMP-style mock exam with exam-length timing.</p>
+<div class="meta-grid"><div><strong>180</strong><span>Questions</span></div><div><strong>230</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="pmp/04_PMP_Mock_Exam.html">Open Test</a>
+</article>
+<article class="test-card" data-title="pmp mock exam 05 full pmp mock test" data-type="pmp">
+<div class="card-top"><span class="test-num">PMP 05</span><span class="badge pmp">PMP Mock</span></div>
+<h3>PMP Mock Exam 05</h3>
+<p class="description">Full PMP-style mock exam with exam-length timing.</p>
+<div class="meta-grid"><div><strong>180</strong><span>Questions</span></div><div><strong>230</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="pmp/05_PMP_Mock_Exam.html">Open Test</a>
+</article>
+<article class="test-card" data-title="pmp mock exam 06 full pmp mock test" data-type="pmp">
+<div class="card-top"><span class="test-num">PMP 06</span><span class="badge pmp">PMP Mock</span></div>
+<h3>PMP Mock Exam 06</h3>
+<p class="description">Full PMP-style mock exam with exam-length timing.</p>
+<div class="meta-grid"><div><strong>180</strong><span>Questions</span></div><div><strong>230</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="pmp/06_PMP_Mock_Exam.html">Open Test</a>
+</article>
+<article class="test-card" data-title="pmp mock exam 07 full pmp mock test" data-type="pmp">
+<div class="card-top"><span class="test-num">PMP 07</span><span class="badge pmp">PMP Mock</span></div>
+<h3>PMP Mock Exam 07</h3>
+<p class="description">Full PMP-style mock exam with exam-length timing.</p>
+<div class="meta-grid"><div><strong>180</strong><span>Questions</span></div><div><strong>230</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="pmp/07_PMP_Mock_Exam.html">Open Test</a>
+</article>
+<article class="test-card" data-title="pmp mock exam 08 full pmp mock test" data-type="pmp">
+<div class="card-top"><span class="test-num">PMP 08</span><span class="badge pmp">PMP Mock</span></div>
+<h3>PMP Mock Exam 08</h3>
+<p class="description">Full PMP-style mock exam with exam-length timing.</p>
+<div class="meta-grid"><div><strong>180</strong><span>Questions</span></div><div><strong>230</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="pmp/08_PMP_Mock_Exam.html">Open Test</a>
+</article>
+<article class="test-card" data-title="pmp mock exam 09 full pmp mock test" data-type="pmp">
+<div class="card-top"><span class="test-num">PMP 09</span><span class="badge pmp">PMP Mock</span></div>
+<h3>PMP Mock Exam 09</h3>
+<p class="description">Full PMP-style mock exam with exam-length timing.</p>
+<div class="meta-grid"><div><strong>180</strong><span>Questions</span></div><div><strong>230</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="pmp/09_PMP_Mock_Exam.html">Open Test</a>
+</article>
+<article class="test-card" data-title="pmp mock exam 10 full pmp mock test" data-type="pmp">
+<div class="card-top"><span class="test-num">PMP 10</span><span class="badge pmp">PMP Mock</span></div>
+<h3>PMP Mock Exam 10</h3>
+<p class="description">Full PMP-style mock exam with exam-length timing.</p>
+<div class="meta-grid"><div><strong>180</strong><span>Questions</span></div><div><strong>230</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="pmp/10_PMP_Mock_Exam.html">Open Test</a>
+</article>
+</section>
+</details>
+<!-- CAPM MOCK EXAMS -->
+<details class="section" data-section="capm" open="">
+<summary class="section-header">
+<div class="section-heading">
+<span class="section-marker">C</span>
+<div>
+<h2 class="section-title">CAPM Mock Exams</h2>
+<span class="section-subtitle">CAPM mock tests · 150 questions · 180 minutes</span>
+</div>
+</div>
+<div class="section-meta">10 tests</div>
+<div class="chevron">›</div>
+</summary>
+<section class="grid">
+<article class="test-card" data-title="capm mock exam 01" data-type="capm">
+<div class="card-top"><span class="test-num">CAPM 01</span><span class="badge capm">CAPM Mock</span></div>
+<h3>CAPM Mock Exam 01</h3>
+<p class="description">Full CAPM-style mock exam with exam-length timing.</p>
+<div class="meta-grid"><div><strong>150</strong><span>Questions</span></div><div><strong>180</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="capm/01_CAPM_Mock_Exam.html">Open Test</a>
+</article>
+<article class="test-card" data-title="capm mock exam 02" data-type="capm">
+<div class="card-top"><span class="test-num">CAPM 02</span><span class="badge capm">CAPM Mock</span></div>
+<h3>CAPM Mock Exam 02</h3>
+<p class="description">Full CAPM-style mock exam with exam-length timing.</p>
+<div class="meta-grid"><div><strong>150</strong><span>Questions</span></div><div><strong>180</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="capm/02_CAPM_Mock_Exam.html">Open Test</a>
+</article>
+<article class="test-card" data-title="capm mock exam 03" data-type="capm">
+<div class="card-top"><span class="test-num">CAPM 03</span><span class="badge capm">CAPM Mock</span></div>
+<h3>CAPM Mock Exam 03</h3>
+<p class="description">Full CAPM-style mock exam with exam-length timing.</p>
+<div class="meta-grid"><div><strong>150</strong><span>Questions</span></div><div><strong>180</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="capm/03_CAPM_Mock_Exam.html">Open Test</a>
+</article>
+<article class="test-card" data-title="capm mock exam 04" data-type="capm">
+<div class="card-top"><span class="test-num">CAPM 04</span><span class="badge capm">CAPM Mock</span></div>
+<h3>CAPM Mock Exam 04</h3>
+<p class="description">Full CAPM-style mock exam with exam-length timing.</p>
+<div class="meta-grid"><div><strong>150</strong><span>Questions</span></div><div><strong>180</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="capm/04_CAPM_Mock_Exam.html">Open Test</a>
+</article>
+<article class="test-card" data-title="capm mock exam 05" data-type="capm">
+<div class="card-top"><span class="test-num">CAPM 05</span><span class="badge capm">CAPM Mock</span></div>
+<h3>CAPM Mock Exam 05</h3>
+<p class="description">Full CAPM-style mock exam with exam-length timing.</p>
+<div class="meta-grid"><div><strong>150</strong><span>Questions</span></div><div><strong>180</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="capm/05_CAPM_Mock_Exam.html">Open Test</a>
+</article>
+<article class="test-card" data-title="capm mock exam 06" data-type="capm">
+<div class="card-top"><span class="test-num">CAPM 06</span><span class="badge capm">CAPM Mock</span></div>
+<h3>CAPM Mock Exam 06</h3>
+<p class="description">Full CAPM-style mock exam with exam-length timing.</p>
+<div class="meta-grid"><div><strong>150</strong><span>Questions</span></div><div><strong>180</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="capm/06_CAPM_Mock_Exam.html">Open Test</a>
+</article>
+<article class="test-card" data-title="capm mock exam 07" data-type="capm">
+<div class="card-top"><span class="test-num">CAPM 07</span><span class="badge capm">CAPM Mock</span></div>
+<h3>CAPM Mock Exam 07</h3>
+<p class="description">Full CAPM-style mock exam with exam-length timing.</p>
+<div class="meta-grid"><div><strong>150</strong><span>Questions</span></div><div><strong>180</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="capm/07_CAPM_Mock_Exam.html">Open Test</a>
+</article>
+<article class="test-card" data-title="capm mock exam 08" data-type="capm">
+<div class="card-top"><span class="test-num">CAPM 08</span><span class="badge capm">CAPM Mock</span></div>
+<h3>CAPM Mock Exam 08</h3>
+<p class="description">Full CAPM-style mock exam with exam-length timing.</p>
+<div class="meta-grid"><div><strong>150</strong><span>Questions</span></div><div><strong>180</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="capm/08_CAPM_Mock_Exam.html">Open Test</a>
+</article>
+<article class="test-card" data-title="capm mock exam 09" data-type="capm">
+<div class="card-top"><span class="test-num">CAPM 09</span><span class="badge capm">CAPM Mock</span></div>
+<h3>CAPM Mock Exam 09</h3>
+<p class="description">Full CAPM-style mock exam with exam-length timing.</p>
+<div class="meta-grid"><div><strong>150</strong><span>Questions</span></div><div><strong>180</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="capm/09_CAPM_Mock_Exam.html">Open Test</a>
+</article>
+<article class="test-card" data-title="capm mock exam 10" data-type="capm">
+<div class="card-top"><span class="test-num">CAPM 10</span><span class="badge capm">CAPM Mock</span></div>
+<h3>CAPM Mock Exam 10</h3>
+<p class="description">Full CAPM-style mock exam with exam-length timing.</p>
+<div class="meta-grid"><div><strong>150</strong><span>Questions</span></div><div><strong>180</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="capm/10_CAPM_Mock_Exam.html">Open Test</a>
+</article>
+</section>
+</details>
+<!-- SCORDO LITE MOCK EXAMS -->
+<details class="section" data-section="practice">
+<summary class="section-header">
+<div class="section-heading">
+<span class="section-marker">S</span>
+<div>
+<h2 class="section-title">PMP Practice Lite Exams</h2>
+<span class="section-subtitle">Condensed PMP practice tests for shorter study sessions.</span>
+</div>
+</div>
+<div class="section-meta">18 tests</div>
+<div class="chevron">›</div>
+</summary>
+<section class="grid">
+<article class="test-card" data-title="pmp practice lite mock exam 1" data-type="practice">
+<div class="card-top"><span class="test-num">01</span><span class="badge practice">PMP Practice</span></div>
+<h3>PMP Lite Mock Exam 1</h3>
+<p class="description">Practice lite mock exam.</p>
+<div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="practice/01_PMP_Lite_Mock_Exam_1.html">Open Test</a>
+</article>
+<article class="test-card" data-title="pmp practice lite mock exam 2" data-type="practice">
+<div class="card-top"><span class="test-num">03</span><span class="badge practice">PMP Practice</span></div>
+<h3>PMP Lite Mock Exam 2</h3>
+<p class="description">Practice lite mock exam.</p>
+<div class="meta-grid"><div><strong>51</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="practice/03_PMP_Lite_Mock_Exam_2.html">Open Test</a>
+</article>
+<article class="test-card" data-title="pmp practice lite mock exam 3" data-type="practice">
+<div class="card-top"><span class="test-num">05</span><span class="badge practice">PMP Practice</span></div>
+<h3>PMP Lite Mock Exam 3</h3>
+<p class="description">Practice lite mock exam.</p>
+<div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="practice/05_PMP_Lite_Mock_Exam_3.html">Open Test</a>
+</article>
+<article class="test-card" data-title="pmp practice lite mock exam 4" data-type="practice">
+<div class="card-top"><span class="test-num">07</span><span class="badge practice">PMP Practice</span></div>
+<h3>PMP Lite Mock Exam 4</h3>
+<p class="description">Practice lite mock exam.</p>
+<div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="practice/07_PMP_Lite_Mock_Exam_4.html">Open Test</a>
+</article>
+<article class="test-card" data-title="pmp practice lite mock exam 5" data-type="practice">
+<div class="card-top"><span class="test-num">09</span><span class="badge practice">PMP Practice</span></div>
+<h3>PMP Lite Mock Exam 5</h3>
+<p class="description">Practice lite mock exam.</p>
+<div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="practice/09_PMP_Lite_Mock_Exam_5.html">Open Test</a>
+</article>
+<article class="test-card" data-title="pmp practice lite mock exam 6" data-type="practice">
+<div class="card-top"><span class="test-num">10</span><span class="badge practice">PMP Practice</span></div>
+<h3>PMP Lite Mock Exam 6</h3>
+<p class="description">Practice lite mock exam.</p>
+<div class="meta-grid"><div><strong>51</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="practice/10_PMP_Lite_Mock_Exam_6.html">Open Test</a>
+</article>
+<article class="test-card" data-title="pmp practice lite mock exam 7" data-type="practice">
+<div class="card-top"><span class="test-num">12</span><span class="badge practice">PMP Practice</span></div>
+<h3>PMP Lite Mock Exam 7</h3>
+<p class="description">Practice lite mock exam.</p>
+<div class="meta-grid"><div><strong>51</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="practice/12_PMP_Lite_Mock_Exam_7.html">Open Test</a>
+</article>
+<article class="test-card" data-title="pmp practice lite mock exam 8" data-type="practice">
+<div class="card-top"><span class="test-num">13</span><span class="badge practice">PMP Practice</span></div>
+<h3>PMP Lite Mock Exam 8</h3>
+<p class="description">Practice lite mock exam.</p>
+<div class="meta-grid"><div><strong>51</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="practice/13_PMP_Lite_Mock_Exam_8.html">Open Test</a>
+</article>
+<article class="test-card" data-title="pmp practice lite mock exam 9" data-type="practice">
+<div class="card-top"><span class="test-num">15</span><span class="badge practice">PMP Practice</span></div>
+<h3>PMP Lite Mock Exam 9</h3>
+<p class="description">Practice lite mock exam.</p>
+<div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="practice/15_PMP_Lite_Mock_Exam_9.html">Open Test</a>
+</article>
+<article class="test-card" data-title="pmp practice lite mock exam 10" data-type="practice">
+<div class="card-top"><span class="test-num">16</span><span class="badge practice">PMP Practice</span></div>
+<h3>PMP Lite Mock Exam 10</h3>
+<p class="description">Practice lite mock exam.</p>
+<div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="practice/16_PMP_Lite_Mock_Exam_10.html">Open Test</a>
+</article>
+<article class="test-card" data-title="pmp practice lite mock exam 11" data-type="practice">
+<div class="card-top"><span class="test-num">18</span><span class="badge practice">PMP Practice</span></div>
+<h3>PMP Lite Mock Exam 11</h3>
+<p class="description">Practice lite mock exam.</p>
+<div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="practice/18_PMP_Lite_Mock_Exam_11.html">Open Test</a>
+</article>
+<article class="test-card" data-title="pmp practice lite mock exam 12" data-type="practice">
+<div class="card-top"><span class="test-num">19</span><span class="badge practice">PMP Practice</span></div>
+<h3>PMP Lite Mock Exam 12</h3>
+<p class="description">Practice lite mock exam.</p>
+<div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="practice/19_PMP_Lite_Mock_Exam_12.html">Open Test</a>
+</article>
+<article class="test-card" data-title="pmp practice lite mock exam 13" data-type="practice">
+<div class="card-top"><span class="test-num">21</span><span class="badge practice">PMP Practice</span></div>
+<h3>PMP Lite Mock Exam 13</h3>
+<p class="description">Practice lite mock exam.</p>
+<div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="practice/21_PMP_Lite_Mock_Exam_13.html">Open Test</a>
+</article>
+<article class="test-card" data-title="pmp practice lite mock exam 14" data-type="practice">
+<div class="card-top"><span class="test-num">22</span><span class="badge practice">PMP Practice</span></div>
+<h3>PMP Lite Mock Exam 14</h3>
+<p class="description">Practice lite mock exam.</p>
+<div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="practice/22_PMP_Lite_Mock_Exam_14.html">Open Test</a>
+</article>
+<article class="test-card" data-title="pmp practice lite mock exam 15" data-type="practice">
+<div class="card-top"><span class="test-num">24</span><span class="badge practice">PMP Practice</span></div>
+<h3>PMP Lite Mock Exam 15</h3>
+<p class="description">Practice lite mock exam.</p>
+<div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="practice/24_PMP_Lite_Mock_Exam_15.html">Open Test</a>
+</article>
+<article class="test-card" data-title="pmp practice lite mock exam 16" data-type="practice">
+<div class="card-top"><span class="test-num">25</span><span class="badge practice">PMP Practice</span></div>
+<h3>PMP Lite Mock Exam 16</h3>
+<p class="description">Practice lite mock exam.</p>
+<div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="practice/25_PMP_Lite_Mock_Exam_16.html">Open Test</a>
+</article>
+<article class="test-card" data-title="pmp practice lite mock exam 17" data-type="practice">
+<div class="card-top"><span class="test-num">27</span><span class="badge practice">PMP Practice</span></div>
+<h3>PMP Lite Mock Exam 17</h3>
+<p class="description">Practice lite mock exam.</p>
+<div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="practice/27_PMP_Lite_Mock_Exam_17.html">Open Test</a>
+</article>
+<article class="test-card" data-title="pmp practice lite mock exam 18" data-type="practice">
+<div class="card-top"><span class="test-num">29</span><span class="badge practice">PMP Practice</span></div>
+<h3>PMP Lite Mock Exam 18</h3>
+<p class="description">Practice lite mock exam.</p>
+<div class="meta-grid"><div><strong>50</strong><span>Questions</span></div><div><strong>60</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="practice/29_PMP_Lite_Mock_Exam_18.html">Open Test</a>
+</article>
+</section>
+</details>
+<!-- SCORDO KNOWLEDGE AREA TESTS -->
+<details class="section" data-section="quiz">
+<summary class="section-header">
+<div class="section-heading">
+<span class="section-marker">K</span>
+<div>
+<h2 class="section-title">Practice Knowledge Area Tests</h2>
+<span class="section-subtitle">Focused quizzes by PMBOK knowledge area.</span>
+</div>
+</div>
+<div class="section-meta">11 tests</div>
+<div class="chevron">›</div>
+</summary>
+<section class="grid">
+<article class="test-card" data-title="practice knowledge area test project management framework" data-type="quiz">
+<div class="card-top"><span class="test-num">02</span><span class="badge quiz">Knowledge Quiz</span></div>
+<h3>Project Management Framework</h3>
+<p class="description">Focused knowledge area quiz.</p>
+<div class="meta-grid"><div><strong>10</strong><span>Questions</span></div><div><strong>15</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="practice/02_Knowledge_Area_Test_Project_Management_Framework.html">Open Test</a>
+</article>
+<article class="test-card" data-title="practice knowledge area test project integration management" data-type="quiz">
+<div class="card-top"><span class="test-num">04</span><span class="badge quiz">Knowledge Quiz</span></div>
+<h3>Project Integration Management</h3>
+<p class="description">Focused knowledge area quiz.</p>
+<div class="meta-grid"><div><strong>10</strong><span>Questions</span></div><div><strong>15</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="practice/04_Knowledge_Area_Test_Project_Integration_Management.html">Open Test</a>
+</article>
+<article class="test-card" data-title="practice knowledge area test project scope management" data-type="quiz">
+<div class="card-top"><span class="test-num">06</span><span class="badge quiz">Knowledge Quiz</span></div>
+<h3>Project Scope Management</h3>
+<p class="description">Focused knowledge area quiz.</p>
+<div class="meta-grid"><div><strong>10</strong><span>Questions</span></div><div><strong>15</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="practice/06_Knowledge_Area_Test_Project_Scope_Management.html">Open Test</a>
+</article>
+<article class="test-card" data-title="practice knowledge area test project time management" data-type="quiz">
+<div class="card-top"><span class="test-num">08</span><span class="badge quiz">Knowledge Quiz</span></div>
+<h3>Project Time Management</h3>
+<p class="description">Focused knowledge area quiz.</p>
+<div class="meta-grid"><div><strong>10</strong><span>Questions</span></div><div><strong>15</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="practice/08_Knowledge_Area_Test_Project_Time_Management.html">Open Test</a>
+</article>
+<article class="test-card" data-title="practice knowledge area test project cost management" data-type="quiz">
+<div class="card-top"><span class="test-num">11</span><span class="badge quiz">Knowledge Quiz</span></div>
+<h3>Project Cost Management</h3>
+<p class="description">Focused knowledge area quiz.</p>
+<div class="meta-grid"><div><strong>10</strong><span>Questions</span></div><div><strong>15</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="practice/11_Knowledge_Area_Test_Project_Cost_Management.html">Open Test</a>
+</article>
+<article class="test-card" data-title="practice knowledge area test project quality management" data-type="quiz">
+<div class="card-top"><span class="test-num">14</span><span class="badge quiz">Knowledge Quiz</span></div>
+<h3>Project Quality Management</h3>
+<p class="description">Focused knowledge area quiz.</p>
+<div class="meta-grid"><div><strong>10</strong><span>Questions</span></div><div><strong>15</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="practice/14_Knowledge_Area_Test_Project_Quality_Management.html">Open Test</a>
+</article>
+<article class="test-card" data-title="practice knowledge area test project human resource management" data-type="quiz">
+<div class="card-top"><span class="test-num">17</span><span class="badge quiz">Knowledge Quiz</span></div>
+<h3>Project Human Resource Management</h3>
+<p class="description">Focused knowledge area quiz.</p>
+<div class="meta-grid"><div><strong>10</strong><span>Questions</span></div><div><strong>15</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="practice/17_Knowledge_Area_Test_Project_Human_Resource_Management.html">Open Test</a>
+</article>
+<article class="test-card" data-title="practice knowledge area test project communications management" data-type="quiz">
+<div class="card-top"><span class="test-num">20</span><span class="badge quiz">Knowledge Quiz</span></div>
+<h3>Project Communications Management</h3>
+<p class="description">Focused knowledge area quiz.</p>
+<div class="meta-grid"><div><strong>10</strong><span>Questions</span></div><div><strong>15</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="practice/20_Knowledge_Area_Test_Project_Communications_Management.html">Open Test</a>
+</article>
+<article class="test-card" data-title="practice knowledge area test project risk management" data-type="quiz">
+<div class="card-top"><span class="test-num">23</span><span class="badge quiz">Knowledge Quiz</span></div>
+<h3>Project Risk Management</h3>
+<p class="description">Focused knowledge area quiz.</p>
+<div class="meta-grid"><div><strong>10</strong><span>Questions</span></div><div><strong>15</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="practice/23_Knowledge_Area_Test_Project_Risk_Management.html">Open Test</a>
+</article>
+<article class="test-card" data-title="practice knowledge area test project procurement management" data-type="quiz">
+<div class="card-top"><span class="test-num">26</span><span class="badge quiz">Knowledge Quiz</span></div>
+<h3>Project Procurement Management</h3>
+<p class="description">Focused knowledge area quiz.</p>
+<div class="meta-grid"><div><strong>10</strong><span>Questions</span></div><div><strong>15</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="practice/26_Knowledge_Area_Test_Project_Procurement_Management.html">Open Test</a>
+</article>
+<article class="test-card" data-title="practice knowledge area test project stakeholder management" data-type="quiz">
+<div class="card-top"><span class="test-num">28</span><span class="badge quiz">Knowledge Quiz</span></div>
+<h3>Project Stakeholder Management</h3>
+<p class="description">Focused knowledge area quiz.</p>
+<div class="meta-grid"><div><strong>10</strong><span>Questions</span></div><div><strong>15</strong><span>Minutes</span></div><div><strong>70%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="practice/28_Knowledge_Area_Test_Project_Stakeholder_Management.html">Open Test</a>
+</article>
+</section>
+</details>
+<!-- FOCUS AREA -->
+<details class="section" data-section="focus">
+<summary class="section-header">
+<div class="section-heading">
+<span class="section-marker">F</span>
+<div>
+<h2 class="section-title">Focus Area Tests</h2>
+<span class="section-subtitle">Focused specialist tests.</span>
+</div>
+</div>
+<div class="section-meta">1 test</div>
+<div class="chevron">›</div>
+</summary>
+<section class="grid">
+<article class="test-card" data-title="practice focus area test professional and social responsibility" data-type="focus">
+<div class="card-top"><span class="test-num">30</span><span class="badge focus">Focus Area</span></div>
+<h3>Professional and Social Responsibility</h3>
+<p class="description">Focus area test.</p>
+<div class="meta-grid"><div><strong>30</strong><span>Questions</span></div><div><strong>30</strong><span>Minutes</span></div><div><strong>80%</strong><span>Pass Mark</span></div></div>
+<a class="open-btn" href="practice/30_Focus_Area_Test_Professional_and_Social_Responsibility.html">Open Test</a>
+</article>
+</section>
+</details>
+<p class="footer">PMP mock exams are listed as 180 questions / 230 minutes. CAPM mock exams are listed as 150 questions / 180 minutes. For GitHub Pages caching, use a temporary URL suffix such as <strong>?v=2</strong> after updates.</p>
 </main>
-
 <script>
   const buttons = Array.from(document.querySelectorAll('.filter-btn'));
   const cards = Array.from(document.querySelectorAll('.test-card'));
