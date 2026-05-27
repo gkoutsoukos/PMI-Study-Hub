@@ -1146,58 +1146,91 @@
   }
 
 
+
   /* =========================================================
-     PMI Study Hub floating last answered patch
+     Readability patch: structured question/explanation text
      ========================================================= */
+  .formatted-text p {
+    margin: 0 0 0.75em;
+  }
+  .formatted-text p:last-child {
+    margin-bottom: 0;
+  }
+  .q-text.formatted-text {
+    line-height: 1.62;
+    max-width: 72ch;
+  }
+  .q-text .question-prompt {
+    margin-top: 0.9em;
+    padding: 10px 12px;
+    background: var(--cream);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 8px 8px 0;
+    font-weight: 600;
+    color: var(--navy);
+  }
+  .opt-text.formatted-text {
+    line-height: 1.45;
+  }
+  .explanation.formatted-text {
+    line-height: 1.65;
+  }
+  .explanation .answer-line {
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.85em;
+  }
+  .explanation .explanation-label {
+    font-weight: 700;
+    color: var(--navy);
+    margin: 0.65em 0 0.35em;
+  }
+  .explanation .numbered-line,
+  .explanation .bullet-line {
+    margin: 0.35em 0 0.35em 1.1em;
+  }
+  body.dark .q-text .question-prompt {
+    background: #0b1020;
+    color: #f0d879;
+  }
+  body.dark .explanation .answer-line,
+  body.dark .explanation .explanation-label {
+    color: #f0d879;
+  }
+
+
+  /* Floating Last Answered button - stays accessible during long mocks */
   .floating-last-btn {
     position: fixed;
     right: 18px;
     bottom: 18px;
-    z-index: 180;
+    z-index: 150;
     display: none;
     align-items: center;
-    justify-content: center;
     gap: 6px;
-    min-width: 104px;
-    padding: 11px 14px;
+    padding: 10px 14px;
     border-radius: 999px;
-    border: 1px solid rgba(201,168,76,.45);
+    border: 1.5px solid rgba(201,168,76,0.55);
     background: var(--navy);
     color: #fff;
-    box-shadow: 0 8px 28px rgba(0,0,0,.22);
     font-family: 'DM Sans', sans-serif;
-    font-size: .82rem;
-    font-weight: 700;
+    font-size: 0.82rem;
+    font-weight: 600;
+    box-shadow: 0 8px 26px rgba(0,0,0,0.22);
     cursor: pointer;
-    transition: transform .15s ease, opacity .15s ease, background .15s ease;
   }
-
-  .floating-last-btn:hover {
-    transform: translateY(-1px);
-    background: var(--navy-light);
-  }
-
-  .floating-last-btn.visible {
-    display: inline-flex;
-  }
-
+  .floating-last-btn.show { display: inline-flex; }
+  .floating-last-btn:hover { background: var(--navy-light); }
   body.dark .floating-last-btn {
     background: #d6b85a;
     color: #07111f;
-    border-color: rgba(214,184,90,.7);
+    border-color: #f0d879;
   }
 
-  body.dark .floating-last-btn:hover {
-    background: #f0d879;
-  }
-
-  @media (max-width: 700px) {
+  @media (min-width: 701px) {
     .floating-last-btn {
-      right: 12px;
-      bottom: 12px;
-      min-width: 92px;
-      padding: 10px 12px;
-      font-size: .76rem;
+      right: 26px;
+      bottom: 26px;
     }
   }
 
@@ -1229,7 +1262,7 @@
       <div id="saveIndicator">✓ Saved</div>
       <div class="score-chip">
         <div class="val" id="scoreVal">0</div>
-        <div class="lbl">Correct</div>
+        <div class="lbl">Correct / Answered</div>
       </div>
       <div class="pct-chip">
         <div class="val" id="pctVal">—</div>
@@ -1273,7 +1306,7 @@
 </div>
 
 
-<button class="floating-last-btn" id="floatingLastAnsweredBtn" type="button" onclick="jumpToLastAnswered()">↳ Last</button>
+<button class="floating-last-btn" id="floatingLastAnsweredBtn" onclick="jumpToLastAnswered()" type="button" title="Jump to your latest submitted answer">↳ Last answered</button>
 
 <div class="modal-overlay" id="resetModal">
   <div class="modal">
@@ -1464,6 +1497,92 @@ function updateHeader() {
   document.getElementById('fb-flagged').textContent = `⚑ Flagged (${flagged})`;
   updateTimerUI();
   updateModeUI();
+  updateLastAnsweredButton();
+}
+
+
+
+function smartSentenceChunks(text, maxChars = 330) {
+  const cleaned = String(text || '').replace(/\s+/g, ' ').trim();
+  if (!cleaned) return [];
+  const sentences = cleaned.match(/[^.!?]+[.!?]+(?:["”’')\]]+)?|[^.!?]+$/g) || [cleaned];
+  const chunks = [];
+  let current = '';
+  sentences.forEach(sentence => {
+    const s = sentence.trim();
+    if (!s) return;
+    if (current && (current.length + s.length + 1 > maxChars)) {
+      chunks.push(current.trim());
+      current = s;
+    } else {
+      current = current ? current + ' ' + s : s;
+    }
+  });
+  if (current.trim()) chunks.push(current.trim());
+  return chunks;
+}
+
+function htmlParagraphsFromChunks(chunks, extraClass = '') {
+  return chunks.map(chunk => `<p${extraClass ? ` class="${extraClass}"` : ''}>${escHtml(chunk)}</p>`).join('');
+}
+
+function formatQuestionText(text) {
+  const cleaned = String(text || '').replace(/\s+/g, ' ').trim();
+  if (!cleaned) return '';
+
+  const cues = [
+    ' Which of the following', ' Which one of the following', ' Which one of the below',
+    ' Which of the below', ' Which statement', ' What should', ' What is', ' What can',
+    ' What goal', ' What practice', ' How should', ' Why should', ' Select whatever',
+    ' Select the', ' Identify the'
+  ];
+  let splitAt = -1;
+  cues.forEach(cue => {
+    const idx = cleaned.lastIndexOf(cue);
+    if (idx > 80 && idx > splitAt) splitAt = idx;
+  });
+
+  if (splitAt > -1) {
+    const context = cleaned.slice(0, splitAt).trim();
+    const prompt = cleaned.slice(splitAt).trim();
+    return htmlParagraphsFromChunks(smartSentenceChunks(context, 360)) + htmlParagraphsFromChunks([prompt], 'question-prompt');
+  }
+
+  return htmlParagraphsFromChunks(smartSentenceChunks(cleaned, 360));
+}
+
+function formatOptionText(text) {
+  const cleaned = String(text || '').replace(/\s+/g, ' ').trim();
+  return htmlParagraphsFromChunks(smartSentenceChunks(cleaned, 300));
+}
+
+function formatExplanationText(text) {
+  let cleaned = String(text || '').replace(/\s+/g, ' ').trim();
+  if (!cleaned) return '';
+
+  let html = '';
+  const answerMatch = cleaned.match(/^Answer:\s*[^.]+\./i);
+  if (answerMatch) {
+    html += `<p class="answer-line">${escHtml(answerMatch[0])}</p>`;
+    cleaned = cleaned.slice(answerMatch[0].length).trim();
+  }
+
+  if (/^Explanation\b/i.test(cleaned)) {
+    html += `<p class="explanation-label">Explanation</p>`;
+    cleaned = cleaned.replace(/^Explanation\s*/i, '').trim();
+  }
+
+  // Add visual breaks before numbered/bulleted points that were flattened by PDF conversion.
+  cleaned = cleaned
+    .replace(/\s+(\d+\.\s+)/g, '\n$1')
+    .replace(/\s+(●\s+)/g, '\n$1');
+
+  const rawParts = cleaned.split(/\n+/).map(p => p.trim()).filter(Boolean);
+  rawParts.forEach(part => {
+    const cls = /^\d+\.\s+/.test(part) ? 'numbered-line' : (/^●\s+/.test(part) ? 'bullet-line' : '');
+    html += htmlParagraphsFromChunks(smartSentenceChunks(part, cls ? 520 : 360), cls);
+  });
+  return html;
 }
 
 function renderCard(q) {
@@ -1487,7 +1606,7 @@ function renderCard(q) {
     const onclick = (s.revealed || locked) ? '' : `onclick="toggleOpt(${q.num},'${letter}')"`;
     return `<div class="${cls}" ${onclick}>
       <div class="opt-letter">${letter}</div>
-      <div class="opt-text">${escHtml(q.options[letter])}</div>
+      <div class="opt-text formatted-text">${formatOptionText(q.options[letter])}</div>
     </div>`;
   }).join('');
 
@@ -1514,7 +1633,7 @@ function renderCard(q) {
   let explHTML = '';
   if (s.revealed && q.explanation) {
     const explImgs = (q.explanationImages || []).map(src => `<div class="source-image-wrap"><img src="${src}" alt="Source image from PDF"></div>`).join('');
-    explHTML = `<div class="explanation show"><strong>Explanation</strong>${escHtml(q.explanation)}${explImgs}</div>
+    explHTML = `<div class="explanation show formatted-text"><strong>Explanation</strong>${formatExplanationText(q.explanation)}${explImgs}</div>
     ${locked ? '<div class="locked-notice">This section is locked in Simulation Mode.</div>' : `<button class="reset-btn" onclick="resetQuestion(${q.num})">↺ Try again</button>`}`;
   }
 
@@ -1525,7 +1644,7 @@ function renderCard(q) {
   return `<div class="q-card${locked ? ' locked' : ''}" id="qcard-${q.num}">
     <div class="q-header">
       <span class="q-num">${qNumLabel}</span>
-      <div class="q-text">${escHtml(q.text)}${(q.images || []).map(src => `<div class="source-image-wrap"><img src="${src}" alt="Source image from PDF"></div>`).join('')}</div>
+      <div class="q-text formatted-text">${formatQuestionText(q.text)}${(q.images || []).map(src => `<div class="source-image-wrap"><img src="${src}" alt="Source image from PDF"></div>`).join('')}</div>
     </div>
     <div class="q-options">${optHTML}</div>
     <div class="q-actions">${actHTML}</div>
@@ -1583,6 +1702,49 @@ function toggleOpt(num, letter) {
 }
 
 const STORAGE_KEY = 'pmp_08_pmp_mock_exam_progress';
+const LAST_ANSWERED_STORAGE_KEY = TEST_ID + '_last_answered';
+let lastAnsweredNum = null;
+
+
+function calculateLastAnsweredFromState() {
+  let last = null;
+  for (const q of QUIZ_DATA) {
+    const s = state[q.num];
+    if (s && s.revealed) last = q.num;
+  }
+  return last;
+}
+
+function saveLastAnsweredNum() {
+  try {
+    if (lastAnsweredNum) localStorage.setItem(LAST_ANSWERED_STORAGE_KEY, String(lastAnsweredNum));
+    else localStorage.removeItem(LAST_ANSWERED_STORAGE_KEY);
+  } catch(e) {}
+}
+
+function loadLastAnsweredNum() {
+  try {
+    const raw = localStorage.getItem(LAST_ANSWERED_STORAGE_KEY);
+    const parsed = raw ? parseInt(raw, 10) : null;
+    if (parsed && state[parsed] && state[parsed].revealed) {
+      lastAnsweredNum = parsed;
+      return;
+    }
+  } catch(e) {}
+  lastAnsweredNum = calculateLastAnsweredFromState();
+  saveLastAnsweredNum();
+}
+
+function updateLastAnsweredButton() {
+  const btn = document.getElementById('floatingLastAnsweredBtn');
+  if (!btn) return;
+  const currentLast = lastAnsweredNum && state[lastAnsweredNum] && state[lastAnsweredNum].revealed
+    ? lastAnsweredNum
+    : calculateLastAnsweredFromState();
+  lastAnsweredNum = currentLast;
+  btn.classList.toggle('show', !!currentLast);
+  if (currentLast) btn.textContent = `↳ Last answered: Q${currentLast}`;
+}
 
 function saveProgress() {
   try {
@@ -1643,6 +1805,8 @@ function submitAnswer(num) {
   if (sel === cor) s.result = 'correct';
   else if (s.selected.some(l => correctAnswers.includes(l))) s.result = 'partial';
   else s.result = 'wrong';
+  lastAnsweredNum = num;
+  saveLastAnsweredNum();
   refreshCard(num);
   saveProgress();
   flashSaved();
@@ -1652,6 +1816,10 @@ function submitAnswer(num) {
 function resetQuestion(num) {
   if (isLocked(num)) return;
   state[num] = { selected: [], revealed: false, result: null, flagged: false };
+  if (lastAnsweredNum === num) {
+    lastAnsweredNum = calculateLastAnsweredFromState();
+    saveLastAnsweredNum();
+  }
   refreshCard(num);
   saveProgress();
   flashSaved();
@@ -1867,15 +2035,15 @@ function jumpTo() {
 }
 
 function jumpToLastAnswered() {
-  let last = null;
-  for (const q of QUIZ_DATA) {
-    const s = state[q.num];
-    if (s && (s.revealed || (s.selected && s.selected.length > 0))) last = q.num;
-  }
+  const last = (lastAnsweredNum && state[lastAnsweredNum] && state[lastAnsweredNum].revealed)
+    ? lastAnsweredNum
+    : calculateLastAnsweredFromState();
   if (!last) {
-    alert('No answered question found yet.');
+    alert('No submitted answer found yet.');
     return;
   }
+  lastAnsweredNum = last;
+  saveLastAnsweredNum();
   setFilter('all');
   setTimeout(() => {
     const card = document.getElementById('qcard-' + last);
@@ -1894,6 +2062,8 @@ function confirmReset() {
   localStorage.removeItem(STORAGE_KEY);
   localStorage.removeItem(TIMER_STORAGE_KEY);
   localStorage.removeItem(MODE_STORAGE_KEY);
+  localStorage.removeItem(LAST_ANSWERED_STORAGE_KEY);
+  lastAnsweredNum = null;
   examTimer = { elapsed: 0, running: false, alarmed: false };
   examMode = 'study';
   lockedThrough = 0;
@@ -1908,6 +2078,7 @@ QUIZ_DATA.forEach(q => {
   state[q.num] = { selected: [], revealed: false, result: null, flagged: false };
 });
 const hadSaved = loadProgress();
+loadLastAnsweredNum();
 loadModeSettings();
 loadTimerState();
 renderList();
@@ -1929,6 +2100,13 @@ if (headerEl && filterEl) {
     if (!header) return;
 
     const y = window.scrollY || 0;
+    const mobileCompactAllowed = window.matchMedia && window.matchMedia('(max-width: 700px)').matches;
+    if (!mobileCompactAllowed) {
+      isCompact = false;
+      header.classList.remove('compact-scroll');
+      ticking = false;
+      return;
+    }
 
     // Stable hysteresis:
     // - once the user scrolls meaningfully down, keep the compact header
@@ -2116,48 +2294,6 @@ function hideExportModal() {
   const modal = document.getElementById('exportModal');
   if (modal) modal.classList.remove('show');
 }
-
-
-
-function hasLastAnsweredForFloatingButton() {
-  try {
-    if (!state || !Array.isArray(QUIZ_DATA)) return false;
-    return QUIZ_DATA.some(q => state[q.num] && state[q.num].revealed);
-  } catch (e) {
-    return false;
-  }
-}
-
-function updateFloatingLastAnsweredButton() {
-  const btn = document.getElementById('floatingLastAnsweredBtn');
-  if (!btn) return;
-  btn.classList.toggle('visible', hasLastAnsweredForFloatingButton());
-}
-
-(function patchFloatingLastAnsweredUpdates() {
-  const names = ['submitAnswer', 'resetQuestion', 'confirmReset', 'loadProgress', 'renderList', 'updateHeader'];
-
-  names.forEach(name => {
-    try {
-      const original = window[name];
-      if (typeof original === 'function' && !original.__floatingLastPatched) {
-        const wrapped = function(...args) {
-          const result = original.apply(this, args);
-          setTimeout(updateFloatingLastAnsweredButton, 0);
-          return result;
-        };
-        wrapped.__floatingLastPatched = true;
-        window[name] = wrapped;
-      }
-    } catch (e) {}
-  });
-
-  document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(updateFloatingLastAnsweredButton, 150);
-  });
-
-  setTimeout(updateFloatingLastAnsweredButton, 500);
-})();
 
 </script>
 </body>
